@@ -9,7 +9,6 @@ public class X2Test {
 
     @Test
     public void whenA10B0C0X2Then40() {
-
         /* Входные параметра. Их будет 4 для данного случая*/
         int a = 10;
         int b = 0;
