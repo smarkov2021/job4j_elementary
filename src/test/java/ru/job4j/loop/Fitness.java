@@ -8,7 +8,6 @@ public class Fitness {
         nik = nik * 2;
         month++;
         }
-
         return month;
     }
 }
