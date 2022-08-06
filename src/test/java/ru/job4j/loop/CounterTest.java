@@ -12,4 +12,13 @@ public class CounterTest {
         int expected = 30;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    public void whenSumEvenNumbersFromOneToFiveThenSix() {
+        int start = 1;
+        int finish = 5;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 6;
+        assertThat(result).isEqualTo(expected);
+    }
 }
