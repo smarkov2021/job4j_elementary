@@ -54,4 +54,15 @@ public class FindLoopTest {
             int expected = -1;
             assertThat(result).isEqualTo(expected);
     }
+
+        @Test
+        public void whenDiapasonHas10Then2() {
+            int[] data = new int[] {5, 2, 10, 2, 4};
+            int el = 10;
+            int start = 1;
+            int finish = 3;
+            int result = FindLoop.indexInRange(data, el, start, finish);
+            int expected = 2;
+            assertThat(result).isEqualTo(expected);
     }
+}
