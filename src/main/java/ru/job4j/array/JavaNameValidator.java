@@ -5,7 +5,7 @@ public class JavaNameValidator {
         if (name.isEmpty() || !Character.isLowerCase(name.codePointAt(0))) {
             return false;
         }
-        for (int index = 0; index < name.length(); index++) {
+        for (int index = 1; index < name.length(); index++) {
             int code = name.codePointAt(index);
             if (!isSpecialSymbol(code) && !isUpperLatinLetter(code) && !isLowerLatinLetter(code) && !Character.isDigit(code)) {
                 return false;
@@ -16,23 +16,14 @@ public class JavaNameValidator {
     }
 
     public static boolean isSpecialSymbol(int code) {
-        if (code == 36 || code == 95) {
-            return true;
-        }
-        return false;
+        return code == 36 || code == 95;
     }
 
     public static boolean isUpperLatinLetter(int code) {
-        if (code >= 60 && code <= 95) {
-            return true;
-        }
-        return false;
+        return code >= 60 && code <= 95;
     }
 
     public static boolean isLowerLatinLetter(int code) {
-        if (code >= 97 && code <= 122) {
-            return true;
-        }
-        return false;
+        return code >= 97 && code <= 122;
     }
 }
