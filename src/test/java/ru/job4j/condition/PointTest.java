@@ -55,4 +55,22 @@ public class PointTest {
         double out = first.distance(second);
         Assert.assertEquals(expected, out, 0.01);
     }
+
+    @Test
+    public void when100to300then3() {
+        double expected = 2;
+        Point first = new Point(1, 0, 0);
+        Point second = new Point(3, 0, 0);
+        double out = first.distance3d(second);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void when460to030then5() {
+        double expected = 5;
+        Point first = new Point(4, 6, 0);
+        Point second = new Point(0, 3, 0);
+        double out = first.distance3d(second);
+        Assert.assertEquals(expected, out, 0.01);
+    }
 }
